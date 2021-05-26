@@ -2,19 +2,8 @@ import React, { useState, useEffect } from 'react'
 import {TextField, Button  }from '@material-ui/core';
 import MessageList from '@components/MessageList';
 import {nanoid} from 'nanoid';
+import {user, botMessage} from '@scripts/constants';
 
-const user = {
-    name: "Елена",
-    avatar: 'https://randomuser.me/api/portraits/women/32.jpg',
-}
-
-const botMessage = {
-    text: 'Спасибо за сообщение! Мы ответим в ближайшее время.',  
-    user: {
-        avatar: 'https://randomuser.me/api/portraits/men/32.jpg',
-        name: "Бот",
-    }
-}
 
 const Chat = () => {
     const [message, setMessage] = useState('');
